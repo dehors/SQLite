@@ -5,8 +5,8 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.slam24.sqlite.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.example.slam24.sqlite.signup"
+    tools:showIn="@layout/activity_signup">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,31 +17,39 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewMainTitle"
+                android:id="@+id/textViewTitleSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
-                android:text="Logueo de Usuario"
+                android:text="Registro de Usuario"
                 android:textColor="@color/colorPrimary"
-                android:textSize="20sp"/>
-
-            <ImageView
-                android:id="@+id/imageViewLogo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:contentDescription="Image house"
-                app:srcCompat="@drawable/casa" />
+                android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextEmail"
+                android:id="@+id/editTextSUName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="Ingrese Nombre"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextSUDistritic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="Ingrese Distrito"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextSUEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -51,31 +59,22 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editTextPass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:ems="10"
-                android:hint="************"
-                android:inputType="textPassword" />
-
-            <Button
-                android:id="@+id/buttonLogin"
+                android:id="@+id/editTextSUPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Ingresar" />
+                android:ems="10"
+                android:hint="*************"
+                android:inputType="textPassword" />
 
-            <TextView
-                android:id="@+id/textViewSignUp"
+            <Button
+                android:id="@+id/buttonSigUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:gravity="center_horizontal"
-                android:text="Registrese!"
-                android:textColor="@color/colorPrimary"
-                android:textSize="15sp" />
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:text="Ingresar Usuario" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
