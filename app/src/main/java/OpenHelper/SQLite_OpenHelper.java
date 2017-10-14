@@ -46,9 +46,9 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper{
         this.getWritableDatabase().insert("users",null,values);
     }
     //Allow validate if user exist
-    public Cursor Login(String usu, String pass) throws SQLiteException{
+    public Cursor login(String usu, String pass) throws SQLiteException{
         Cursor mcursor = null;
-        mcursor = this.getReadableDatabase().query("users",new String[]{"_ID","Name","District","Email","Password"},"Email like '"+usu+"' Password like '"+pass+"'",null,null,null,null);
+        mcursor = this.getReadableDatabase().query("users",new String[]{"_ID","Name","District","Email","Password"},"Email like '"+usu+"' and Password like '"+pass+"'",null,null,null,null);
         return mcursor;
     }
 }
